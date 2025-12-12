@@ -31,7 +31,7 @@ class UserFactory extends Factory
         // $this->faker->unique()->userName,
         'email' => strtolower($first . $last .$uniqueId) . '@mailinator.com',
         // $this->faker->unique()->safeEmail,
-        'mobile_no' => $this->faker->unique()->randomNumber($nbDigits = 9, $strict = false),
+        'mobile_no' => $this->faker->numerify('9#########'),
         'password' => bcrypt('password'),
         'email_verification_code' =>str_random(40),
         //'email_verified' => 1,
